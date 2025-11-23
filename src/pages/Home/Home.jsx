@@ -18,7 +18,7 @@ const Audi_S4_card = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763856
 const Audi_S4_avant_card = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763856050/Audi_S4_avant_card_kygsya.png";
 const Audi_RS4_card = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763856049/Audi_Rs4_card_oqp7ai.png";
 
-const Audi_A5_avant_photo = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763856052/Audi_A5_avant_photo_g7okez.png";
+const Audi_A5_avant_photo = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763910509/Audi_A5_avant_photo_c5v4u0.png";
 
 
 

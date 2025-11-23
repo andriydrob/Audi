@@ -5,6 +5,7 @@ import PhotoCarousel from '../../components/UI/PhotoCarousel';
 import PhotoAudi from '../../components/UI/PhotoAudi';
 import PhotoCard from '../../components/UI/PhotoCard';
 import SpecItem from '../../components/UI/SpecItem';
+import VideoAudi from '../../components/UI/VideoAudi';
 
 const Audi_Rs3_photo = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763856049/Audi_Rs3_photo_pml9ns.png";
 
@@ -20,17 +21,35 @@ const Audi_RS4_card = "https://res.cloudinary.com/dh4jjre2h/image/upload/v176385
 
 const Audi_A5_avant_photo = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763910509/Audi_A5_avant_photo_c5v4u0.png";
 
+const Audi_A5_card = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763911743/Audi_A5_card_yec7bk.png";
+const Audi_S5_card = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763912415/Audi_S5_card_iuydua.png";
+const Audi_RS5_card = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763912715/Audi_RS5_card_rroshl.png";
 
+const Audi_RS6_video = "https://res.cloudinary.com/dh4jjre2h/video/upload/v1763913590/Audi_RS6_video_xcfd9x.mp4";
+
+const Audi_A6_sedan = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763915055/Audi_A6_sedan_ap8sdd.png";
+const Audi_A6_avant_card = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763915056/Audi_A6_avant_card_hw5ut8.png";
+const Audi_S6_etron_avant = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763915055/Audi_S6_etron_avant_qahnae.png";
+
+const Audi_RS7_photo = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763920263/Audi_RS7_photo_geoi98.png";
+
+const Audi_A7_card = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763920676/Audi_A7_card_lzusbq.png";
+const Audi_S7_card = "https://res.cloudinary.com/dh4jjre2h/image/upload/v1763920676/Audi_S7_card_dejyzs.png";
 
 const Home = () => {
 
 const images1 = [Audi_A3_card, Audi_S3_card, Audi_A3_Allstreet_card];
-
 const images2 = [Audi_S4_card, Audi_S4_avant_card, Audi_RS4_card];
+const images3 = [Audi_A5_card, Audi_S5_card, Audi_RS5_card];
+const images4 = [Audi_A6_sedan, Audi_A6_avant_card, Audi_S6_etron_avant];
+const images5 = [Audi_A7_card, Audi_S7_card]
 
 const titles1 = ["Audi A3", "Audi S3", "Audi A3 Allstreet"];
-
 const titles2 = ["Audi S4", "Audi S4 Avant", "Audi RS4"];
+const titles3 = ["Audi A5 Sedan", "Audi S5 Sportback ", "Audi RS5 Sportback"];
+const titles4 = ["Audi A6", "Audi A6 Avant", "Audi S6 e-tron Avant"]
+const titles5 = ["Audi A7 Sportback", "Audi S7 Performance"];
+
 
 //   const images = [
 //     Audi_RS3_1, Audi_RS3_2, Audi_RS3_3, Audi_RS3_4, Audi_RS3_5, Audi_RS3_6, Audi_RS3_7, Audi_RS3_8, Audi_RS3_9, Audi_RS3_10];
@@ -93,6 +112,33 @@ const titles2 = ["Audi S4", "Audi S4 Avant", "Audi RS4"];
             title="AUDI A5 AVANT"
             subtitle="Powerful. Sporty. Emotional."
             />   
+
+            <PhotoCard 
+            images={images3}
+            title={titles3}
+            />
+
+            <VideoAudi 
+            videoUrl={Audi_RS6_video}
+            title="AUDI RS 6"
+            subtitle="The King of Versatility. The only limit is you."
+            />   
+
+            <PhotoCard 
+            images={images4}
+            title={titles4}
+            />
+
+            <PhotoAudi 
+            photo={Audi_RS7_photo}
+            title="AUDI RS 7 Performance"
+            subtitle="Speed dressed in a tuxedo."
+            /> 
+
+            <PhotoCard 
+            images={images5}
+            title={titles5}
+            />
 
             {/* <CenterModeSlider /> */}
         </div>

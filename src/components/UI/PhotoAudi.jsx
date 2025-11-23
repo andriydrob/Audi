@@ -45,25 +45,12 @@ const PhotoAudi = ({ photo, title, subtitle }) => {
                     <p className="Futura New text-lg sm:text-2xl md:text-3xl text-white inline-block">{subtitle}</p>
                 </div>
 
-                <div className='flex space-x-3 md:space-x-4'>
-                    <Btn className="
-                        bg-[#B5B7B8]/80 text-black hover:text-black 
-                        duration-500 font-normal transition rounded-3xl 
-                        py-2 md:py-3 px-6 md:px-8
-                        text-sm md:text-xl 
-                        hover:bg-[#626263]/90 backdrop-blur-sm"
-                    >
+                <div className='flex flex-col space-y-3 md:flex-row md:space-x-4 md:space-y-0'>
+                    <Btn className="bg-[#B5B7B8]/80 text-black hover:text-black duration-500 font-normal transition rounded-3xl py-2 md:py-3 px-6 md:px-8 text-sm md:text-xl hover:bg-[#626263]/90 backdrop-blur-sm">
                         Show more
                     </Btn>
                     
-                    <Btn className="
-                        bg-black/70 text-white 
-                        duration-500 transition 
-                        font-normal rounded-3xl 
-                        py-2 md:py-3 px-6 md:px-8 
-                        text-sm md:text-xl 
-                        hover:bg-[#626263] hover:text-white backdrop-blur-sm"
-                    >
+                    <Btn className="bg-black/70 text-white duration-500 transition font-normal rounded-3xl py-2 md:py-3 px-6 md:px-8 text-sm md:text-xl hover:bg-[#626263] hover:text-white backdrop-blur-sm">
                         Configurator
                     </Btn>
                 </div>

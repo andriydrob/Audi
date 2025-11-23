@@ -13,7 +13,7 @@ const PhotoCard = ({ images, title }) => {
                     <img 
                         src={image.src || image}
                         alt={image.alt || `Photo ${index + 1}`} 
-                        className="w-full h-auto block object-covertransition duration-500 hover:scale-110 rounded-4xl"
+                        className="w-full h-auto block object-cover transition duration-500 hover:scale-110 rounded-4xl"
                     />
                     <div className="relative w-full h-auto bg-[#191919] flex flex-col md:flex-col">
                         <h1 className="Futura New text-xl md:text-4xl text-[#B5B7B8]">{title[index]}</h1>

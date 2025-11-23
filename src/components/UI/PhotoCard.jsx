@@ -1,3 +1,5 @@
+import { ChevronRight } from 'lucide-react';
+
 const PhotoCard = ({ images, title }) => {
     if (!images || images.length === 0) {
         return <div className="text-white p-4 bg-[#191919]">Немає фотографій для відображення.</div>;
@@ -17,7 +19,12 @@ const PhotoCard = ({ images, title }) => {
                     />
                     <div className="relative w-full h-auto bg-[#191919] flex flex-col md:flex-col">
                         <h1 className="Futura New text-xl md:text-4xl text-[#B5B7B8]">{title[index]}</h1>
-                        <p className="border-b Futura New text-base text-white hover:text-[#B5B7B8] cursor-pointer inline-block self-start">Show more</p>
+                        <p className="Futura New text-base text-white hover:text-[#B5B7B8] group cursor-pointer transition duration-300 inline-flex items-center self-start">
+                            <span className='border-b border-white hover:border-[#B5B7B8]'>
+                                Show more 
+                            </span>
+                        <ChevronRight className="ml-1 transition duration-300"/>    
+                        </p>
                     </div>
                 </div>
             ))}

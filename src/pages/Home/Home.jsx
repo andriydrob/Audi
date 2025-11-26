@@ -105,7 +105,6 @@ const titles5 = ["Audi A7 Sportback", "Audi S7 Performance"];
             />
 
             <PhotoAudi 
-
             photo={Audi_A4_sedan_photo}
             title="Audi A4 Sedan"
             subtitle="A balance of elegance and innovation."

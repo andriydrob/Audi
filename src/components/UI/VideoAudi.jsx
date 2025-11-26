@@ -1,9 +1,40 @@
+import { useEffect, useRef } from 'react';
 import Btn from './Btn';
 
-// Змінив назву компонента на VideoAudi, щоб відобразити використання відео
 const VideoAudi = ({ videoUrl, title, subtitle }) => {
+    const videoRef = useRef(null);
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (videoRef.current) {
+                    if (entry.intersectionRatio >= 0.5) {
+                        videoRef.current.play();
+                    } else {
+                        videoRef.current.pause();
+                    }
+                }
+            },
+            {
+                threshold: [0, 0.5, 1],
+            }
+        );
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => {
+            if (containerRef.current) {
+                observer.unobserve(containerRef.current);
+            }
+        };
+    }, []);
+
     return (
         <div 
+            ref={containerRef}
             className='
                 relative 
                 h-screen
@@ -15,14 +46,13 @@ const VideoAudi = ({ videoUrl, title, subtitle }) => {
         >
             <div className='absolute inset-0'>
                 <video 
-                    // Атрибути для автоматичного відтворення на мобільних
+                    ref={videoRef}
                     autoPlay
                     muted
                     loop
                     playsInline 
                     src={videoUrl} 
                     type="video/mp4" 
-                    alt="Car Video Background" 
                     className="
                         w-full h-full
                         object-cover
@@ -31,14 +61,12 @@ const VideoAudi = ({ videoUrl, title, subtitle }) => {
                 />
             </div>
             
-            <div 
-                className="
-                    absolute inset-0 
-                    bg-gradient-to-t 
-                    from-black/70 via-black/30 to-black/20 
-                    z-10 
-                "
-            ></div>
+            <div className="
+                absolute inset-0 
+                bg-gradient-to-t 
+                from-black/70 via-black/30 to-black/20 
+                z-10 
+            "></div>
             
             <div className="
                 absolute 
@@ -46,7 +74,6 @@ const VideoAudi = ({ videoUrl, title, subtitle }) => {
                 z-20
                 w-[90%] md:w-auto
             ">
-                
                 <div className="flex flex-col mb-4 md:mb-6">
                     <h1 className="Futura New font-bold text-4xl sm:text-6xl md:text-7xl text-white leading-none mb-2">{title}</h1>
                     <p className="Futura New text-lg sm:text-2xl md:text-3xl text-white inline-block">{subtitle}</p>
